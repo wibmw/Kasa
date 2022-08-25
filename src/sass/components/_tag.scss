@@ -1,0 +1,127 @@
+/* ************************ TAGS LISTS ******************************** */
+.tag {
+  margin: 0px 60px;
+  overflow: hidden;
+  border-radius: 5px;
+  display: inline-block;
+  white-space: nowrap;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  & .dropdown {
+    float: left;
+    overflow: hidden;
+    font-size: 16px;
+    margin: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: auto;
+    & .dropdown-button {
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      padding: 14px 16px;
+      background-color: inherit;
+      width: 95%;
+      height: 65px;
+      color: $color;
+      &::-webkit-input-placeholder {
+        color: $color;
+      }
+    }
+    &:hover {
+      & em {
+        transform: rotate(-180deg);
+        transition: 0.5s ease-in-out;
+      }
+      & .row {
+        opacity: 1;
+        width: auto;
+        & .col {
+          height: auto;
+          padding: 15px;
+          opacity: 1;
+          transition: 0.5s ease-in-out;
+          transform-style: preserve-3d;
+        }
+      }
+    }
+    & em {
+      position: absolute;
+      margin: 23px 0 0 -10px;
+      color: $color;
+      transform: rotate(0deg);
+      transition: 0.5s ease-in-out;
+    }
+    & .row {
+      margin-top: -30px;
+      opacity: 0;
+      width: min-content;
+
+      & .col {
+        float: left;
+        width: 33.33%;
+        list-style-type: none;
+        display: flex;
+        flex-flow: column nowrap;
+        transition: 0.5s ease-in-out;
+        transform-style: preserve-3d;
+        height: 0px;
+        padding: 0px;
+        opacity: 0;
+        & li {
+          color: white;
+          padding: 10px;
+          text-decoration: none;
+          display: inline-block;
+          text-align: left;
+        }
+        & li:hover {
+          font-weight: bolder;
+          text-shadow: 2px 2px 2px black;
+        }
+      }
+    }
+  }
+}
+
+/* ************************ 3 DROPDOWN COLOR ******************************** */
+#ingredients {
+  background-color: $blue-tag;
+}
+#appareils {
+  background-color: $green-tag;
+}
+#ustensils {
+  background-color: $red-tag;
+}
+
+/* ************************ SELECTED TAGS ******************************** */
+.selectedTag {
+  margin: 20px 0 0 80px;
+  color: $color;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  & span {
+    height: 35px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    & em {
+      margin-left: 10px;
+      font-size: larger;
+      cursor: pointer;
+    }
+  }
+  & .ingTag {
+    background-color: $blue-tag;
+  }
+  & .appTag {
+    background-color: $green-tag;
+  }
+  & .ustTag {
+    background-color: $red-tag;
+  }
+}

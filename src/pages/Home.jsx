@@ -1,24 +1,37 @@
-import logo from '../logo.svg'
-import '../style/Home.css'
+/* eslint-disable array-callback-return */
+import React, { useEffect, useState } from 'react'
 
-function Home() {
+import Banner from '../components/Banner'
+import bannerImage from '../images/home.jpg'
+// import Api from '../api/Api'
+import Card from '../components/Card'
+
+const Home = () => {
+  const [apartments, setApartments] = useState()
+
+  // Function to collect data
+  const getApiData = async () => {
+    await fetch('../../data/logements.json')
+      .then((res) => res.json())
+      .then((data) => setApartments(data))
+  }
+
+  useEffect(() => {
+    getApiData()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Banner imageSrc={bannerImage} text="Chez vous, partout et ailleurs" />
+      <section>
+        {apartments &&
+        apartments.length > 0 &&
+        apartments.map((appart) => (
+          <Card key={appart.id} image={appart.cover} title={appart.title} />
+        ))} 
+      </section>
+
+    </React.Fragment>
   )
 }
 

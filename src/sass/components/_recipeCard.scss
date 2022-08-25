@@ -1,0 +1,79 @@
+/* ************************ GALLERY SECTION ******************************** */
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 35px;
+  margin: 110px 50px;
+  & article {
+    width: 400px;
+    height: 364px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 5px;
+    & .image {
+      height: 50%;
+      background-color: $back-img;
+    }
+    & .container {
+      height: 50%;
+      background-color: $back-color;
+      padding: 0 20px 0 20px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 400;
+      & h2 {
+        font-size: 18px;
+        width: 60%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      & h3 {
+        font-size: 18px;
+      }
+      & .recipe {
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        overflow: hidden;
+        margin-top: -30px;
+        & ul {
+          width: 55%;
+          & li {
+            list-style-type: none;
+            font-size: 12px;
+            text-indent: -40px;
+            white-space: break-spaces;
+          }
+        }
+        & p {
+          display: -webkit-box;
+          -webkit-line-clamp: 6;
+          -webkit-box-orient: vertical;
+          width: 50%;
+          font-size: 12px;
+          text-overflow: ellipsis;
+          font-family: 'Roboto';
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+/* ************************ ERROR CONTROL ******************************** */
+#errorMessage {
+  font-size: 2em;
+  font-weight: bolder;
+  padding: 100px;
+  white-space: nowrap;
+  color: $error;
+  display: none;
+  justify-content: center;
+}
