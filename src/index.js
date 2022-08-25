@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Apropos from './pages/Apropos'
 import Header from './components/Header'
+import Footer from './components/Footer'
+import FicheLogement from './pages/FicheLogement'
 import './style/style.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -14,6 +16,8 @@ root.render(
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route path="/apropos" element={<Apropos />} />
+      <Route path="/ficheLogement" element={<FicheLogement />} />
     </Routes>
+    <Footer />
   </Router>
 )
