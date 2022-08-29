@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "Kasa",
+      "script": "npm",
+      "interpreter": "none",
+      "args": "serve-l 3000-s build"
+    }
+  ]
+}
