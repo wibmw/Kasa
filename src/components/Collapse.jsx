@@ -12,7 +12,7 @@ function Collapse({ title, description }) {
   }
 
   return (
-    <div className="collapse-container">
+    <article className="collapse-container">
       <div className="collapse-title" onClick={descriptionCollapse}>
         {title}{' '}
         <svg className={isCollapsed ? 'rotate-arrow' : 'not-rotate-arrow'} width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@ function Collapse({ title, description }) {
         </svg>
       </div>
       {isCollapsed && <p className="collapse-content">{description}</p>}
-    </div>
+    </article>
   )
 }
 
