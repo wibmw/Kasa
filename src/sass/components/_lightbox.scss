@@ -1,0 +1,41 @@
+#lightbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  mix-blend-mode: normal;
+  & .chevron {
+    width: 47px;
+    height: 70px;
+    position: absolute;
+    fill: white;
+    cursor: pointer;
+    stroke: rgba(0, 0, 0, 0.507);
+    stroke-width: 10;
+  }
+  & .left {
+    left: 70px;
+  }
+  & .right {
+    right: 70px;
+  }
+  & .lightbox-image {
+    max-width: 1240px;
+    width: 85vw;
+    height: 45.5vh;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+  }
+  & .image-index {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: black 1px 1px;
+  }
+}

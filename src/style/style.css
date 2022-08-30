@@ -61,7 +61,7 @@ body {
   font-size: 36px;
   color: #ff6060;
   font-weight: 500;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 0px;
 }
 #apartmentInfo p {
@@ -69,6 +69,9 @@ body {
   font-size: 18px;
   color: #ff6060;
   margin-bottom: 30px;
+}
+#apartmentInfo .tags {
+  margin-top: 10px;
 }
 #apartmentInfo .tags span {
   font-size: 14px;
@@ -240,8 +243,8 @@ body {
   width: 100%;
   height: 100%;
   font-weight: 500;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 #descriptions .left-description {
   width: 50%;
@@ -289,6 +292,48 @@ body {
   color: #ff6060;
   background-color: #f6f6f6;
   border-radius: 10px;
+}
+
+#lightbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  mix-blend-mode: normal;
+}
+#lightbox .chevron {
+  width: 47px;
+  height: 70px;
+  position: absolute;
+  fill: white;
+  cursor: pointer;
+  stroke: rgba(0, 0, 0, 0.507);
+  stroke-width: 10;
+}
+#lightbox .left {
+  left: 70px;
+}
+#lightbox .right {
+  right: 70px;
+}
+#lightbox .lightbox-image {
+  max-width: 1240px;
+  width: 85vw;
+  height: 45.5vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 25px;
+  display: block;
+}
+#lightbox .image-index {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: black 1px 1px;
 }
 
 /**************** Home header ****************/
@@ -391,6 +436,7 @@ footer {
   justify-content: space-evenly;
   flex-direction: column;
   background-color: black;
+  margin-top: 50px;
 }
 footer .footer-text {
   color: white;

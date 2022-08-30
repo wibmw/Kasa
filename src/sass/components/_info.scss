@@ -11,7 +11,7 @@
     font-size: 36px;
     color: $primary-color;
     font-weight: 500;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 0px;
   }
   & p {
@@ -21,16 +21,18 @@
     margin-bottom: 30px;
   }
 
-  & .tags span {
-    font-size: 14px;
-    height: 35px;
-    padding: 5px 25px 5px 25px;
-    margin-right: 10px;
-    border-radius: 10px;
-    color: white;
-    background-color: $primary-color;
+  & .tags {
+    margin-top: 10px;
+    span {
+      font-size: 14px;
+      height: 35px;
+      padding: 5px 25px 5px 25px;
+      margin-right: 10px;
+      border-radius: 10px;
+      color: white;
+      background-color: $primary-color;
+    }
   }
-
   .right-block {
     display: flex;
     flex-direction: column;
