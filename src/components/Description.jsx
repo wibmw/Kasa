@@ -5,9 +5,7 @@ import logements from '../data/logements.json'
 
 function Description({ id }) {
   const apartment = logements.filter((appart) => appart.id == id)[0]
-  // eslint-disable-next-line quotes
-  const equipments = apartment.equipments.map((equipement, index) => <div key={`i-${index}`}> {equipement} </div>)
-  console.log(apartment)
+  const equipments = apartment.equipments.map((equipement, index) => <li key={`i-${index}`}> {equipement} </li>)
 
   return (
     <React.Fragment>

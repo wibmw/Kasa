@@ -56,3 +56,31 @@
     border-radius: 10px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  #descriptions {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    .left-description {
+      width: 100%;
+    } 
+    .right-description {
+      width: 100%;
+    }
+  }
+
+  .collapse-container {
+    & .collapse-title {
+      font-size: 13px;
+      & .rotate-arrow {
+        width: 18px;
+      }
+    }
+    & .collapse-content {
+      padding:20px 10px 10px 10px;
+      font-size: 12px;
+    }
+  }
+}

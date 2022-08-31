@@ -1,16 +1,16 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import logoKasa from '../images/logoKasa.jpg'
 
 function Header() {
   return (
     <header>
-      <Link to="/">
+      <NavLink to="/">
         <img src={logoKasa} className="logo" alt="Kasa" />
-      </Link>
+      </NavLink>
 
       <nav>
-        <Link to="/">Accueil</Link>
-        <Link to="/apropos">A propos</Link>
+        <NavLink to="/">Accueil</NavLink>
+        <NavLink to="/apropos">A propos</NavLink>
       </nav>
     </header>
   )

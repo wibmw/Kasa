@@ -4,16 +4,15 @@
 @import './base/base';
 @import './base/typography';
 
+@import './components/banner';
+@import './components/gallery';
 @import './components/info';
 @import './components/card';
-@import './components/tag';
 @import './components/description';
 @import './components/lightbox';
 
 @import './layout/header';
 @import './layout/footer';
 
-@import './pages/home';
 @import './pages/aPropos';
 @import './pages/erreur';
-@import './pages/ficheLogement';

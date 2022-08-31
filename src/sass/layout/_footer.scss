@@ -1,0 +1,34 @@
+/**************** Footer ****************/
+footer {
+  width: 100%;
+  height: 209px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: black;
+  padding: 100px;
+  margin-top: 30px;
+  flex-shrink: 0;
+  .footer-text {
+    color: white;
+    font-size: 24px;
+  }
+  .footer-logo {
+    width: 115px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    .footer-text {
+      font-size: 12px;
+      width: max-content;
+    }
+    .footer-logo {
+      margin-bottom: 30px;
+    }
+  }
+}

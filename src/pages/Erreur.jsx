@@ -1,10 +1,15 @@
 import React from 'react'
-import Banner from '../components/Banner'
-import bannerImage from '../images/home.jpg'
+import { Link } from 'react-router-dom'
 
 const Erreur = () => (
   <React.Fragment>
-    <Banner imageSrc={bannerImage} text="Chez vous, partout et ailleurs" />
+    <section id="error404">
+      <h1>404</h1>
+      <h2>{'Oups! La page que vous demandez n\'existe pas.'}</h2>
+      <Link to={'/'}>
+        <u>Retourner sur la page d’accueil</u>
+      </Link>
+    </section>
   </React.Fragment>
 )
 

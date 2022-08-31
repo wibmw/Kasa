@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
@@ -18,7 +17,7 @@ root.render(
       <Route exact path="/" element={<Home />} />
       <Route path="/apropos" element={<Apropos />} />
       <Route path="/ficheLogement/:id" element={<FicheLogement />} />
-      <Route path="/erreur" element={<Erreur />} />
+      <Route path="*" element={<Erreur />} />
     </Routes>
     <Footer />
   </Router>

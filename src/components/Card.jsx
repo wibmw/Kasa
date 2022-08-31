@@ -1,15 +1,13 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-//import FicheLogement from '../pages/FicheLogement'
 
-function Card({id, image, title }) {
+function Card({ id, image, title }) {
   return (
     <Link to={`/ficheLogement/${id}`}>
-    <div className="card-container" id={id}>
-      <img className="card-image" src={image}></img>
-      <p className="card-title">{title}</p>
-    </div>
+      <div className="card-container" id={id}>
+        <img className="card-image" src={image}></img>
+        <p className="card-title">{title}</p>
+      </div>
     </Link>
   )
 }
