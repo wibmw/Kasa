@@ -6,19 +6,15 @@
   display: flex;
 }
 
-@mixin wrap {
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@mixin nowrap {
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-@mixin flex-nowrap {
-  @include flex;
-  @include nowrap;
+@mixin flex-row-center {
+  display: flex;
+  align-items: center;
 }
 
 @mixin flex-center {
@@ -26,78 +22,41 @@
   align-items: center;
 }
 
-/******************* Like Icon ************************/
-@mixin inactive-heart {
-  @include flex-nowrap;
-  flex-direction: row-reverse;
-  font-size: 1.3rem;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 1);
-  color: white;
-  transition: 1s;
-}
-
-@mixin active-heart {
-  text-shadow: 0 0 0px rgba(0, 0, 0, 0);
-  background: -moz-linear-gradient(0deg, $color-sec 0%, $color-pri 100%);
-  background: -webkit-linear-gradient(0deg, $color-sec 0%, $color-pri 100%);
-  background: linear-gradient(0deg, $color-sec 0%, $color-pri 100%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.7s;
-}
-
-/******************* Center of the page ************************/
+/******************* Center of the page *******************/
 @mixin align-center {
   width: 100%;
   text-align: center;
 }
 
-/******************* Photographer Info ************************/
-@mixin photographer-picture {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-  border-radius: 50% 50%;
-  background: $back-color-picks;
-  box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
-  //filter: blur(0.7rem);
+@mixin margin-center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@mixin article-h3-to-span {
-  & div {
-    text-align: center;
-    & h3 {
-      color: $color-pri-dark;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-    & div {
-      font-size: 0.6rem;
-      font-weight: 600;
-    }
-    & span {
-      color: #757575;
-      font-size: 0.6rem;
-    }
-  }
+/******************* Margin *******************/
+
+@mixin margin-tb($top,$bot) {
+  margin-top: $top;
+  margin-bottom: $bot;
 }
 
-@mixin article-h2 {
-  & h2 {
-    color: $color-pri-light;
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-bottom: 0px;
-    text-align: center;
-  }
+@mixin margin-lr($left,$right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+/******************* Width and height *******************/
+@mixin wh-100 {
+  width: 100%;
+  height: 100%;
+}
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
 }
 
 /******************* Accessibility ************************/
 @mixin focus-visible {
-  outline: 3px solid $color-pri-dark;
+  outline: 3px solid $primary-color;
   border-radius: 10px;
 }

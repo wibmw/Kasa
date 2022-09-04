@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-function Card({ id, image, title }) {
+const Card = ({ id, image, title }) => {
   return (
+    /************* Card link ******************/
     <Link to={`/ficheLogement/${id}`}>
-      <div className="card-container" id={id}>
-        <img className="card-image" src={image}></img>
-        <p className="card-title">{title}</p>
+      <div className="card" id={id}>
+        {/************* Card Image******************/}
+        <img className="card_image" src={image}></img>
+        {/************* Card Title ******************/}
+        <p className="card_title">{title}</p>
       </div>
     </Link>
   )

@@ -1,12 +1,14 @@
-import logoKasa from '../images/logoKasaWhite.png'
+import logoKasa from '../assets/logoKasaWhite.png'
 
-function Footer() {
-    return (
-      <footer>
-        <img className="footer-logo" src={logoKasa} alt="Logo Kasa"></img>
-        <div className="footer-text">© 2020 Kasa. All rights reserved</div>
-      </footer>
-    )
-  }
-  
-  export default Footer
+const Footer = () => {
+  return (
+    <footer className="footer">
+      {/************* Footer Logo ******************/}
+      <img className="footer_logo" src={logoKasa} alt="Logo Kasa"></img>
+      {/************* Footer text ******************/}
+      <div className="footer_text">© 2020 Kasa. All rights reserved</div>
+    </footer>
+  )
+}
+
+export default Footer

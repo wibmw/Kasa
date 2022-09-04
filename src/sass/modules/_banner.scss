@@ -1,42 +1,40 @@
 /**************** Bannière ****************/
-.banner-container {
-  background-color: $dark-grey;
+.banner {
+  @include wh(100%, 223px);
   position: relative;
-  display: flex;
-  align-items: center;
+  @include flex-row-center;
   justify-content: center;
-  border-radius: 20px;
-  width: 100%;
-  height: 223px;
   flex-shrink: 0;
-  & .banner-image {
-    width: 100%;
-    height: 100%;
+  background-color: $dark-grey;
+  border-radius: 20px;
+  // Banner Image
+  &_image {
+    @include wh-100;
     object-fit: cover;
-    -webkit-filter: brightness(20%); /* Chrome, Safari, Opera */
+    -webkit-filter: brightness(20%);
     filter: brightness(90%);
     border-radius: 20px;
   }
-  & .banner-text {
+  // Banner Text
+  &_text {
     position: absolute;
     font-size: 30px;
-    color: white;
+    color: $back-white;
     font-weight: bold;
-
   }
 }
-
+/**************** Responsive ****************/
 @media screen and (max-width: 768px) {
-  .banner-container {
+  .banner {
     height: 111px;
-    .banner-text {
+    &_text {
       font-size: 24px;
     }
   }
 }
 
 @media screen and (max-width: 475px) {
-  .banner-container .banner-text {
+  .banner_text {
     font-size: 18px;
   }
 }

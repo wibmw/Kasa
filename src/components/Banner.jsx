@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types'
-function Banner({ imageSrc, text }) {
+
+const Banner = ({ imageSrc, text }) => {
   return (
-    <div className="banner-container">
-      <img className="banner-image" src={imageSrc}></img>
-      <div className="banner-text">{text}</div>
+    /************* Banner Component ******************/
+    <div className="banner">
+      {/************* Banner Image ******************/}
+      <img className="banner_image" src={imageSrc}></img>
+      {/************* Banner Text ******************/}
+      <div className="banner_text">{text}</div>
     </div>
   )
 }

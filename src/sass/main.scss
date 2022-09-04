@@ -2,15 +2,17 @@
 @import './utils/mixins';
 
 @import './base/base';
+@import './base/index';
 @import './base/typography';
 
-@import './components/banner';
-@import './components/gallery';
-@import './components/info';
-@import './components/card';
-@import './components/description';
-@import './components/lightbox';
+@import './modules/banner';
+@import './modules/card';
+@import './modules/collapse';
+@import './modules/lightbox';
 
+@import './layout/description';
+@import './layout/gallery';
+@import './layout/info';
 @import './layout/header';
 @import './layout/footer';
 

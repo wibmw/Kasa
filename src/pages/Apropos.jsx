@@ -1,10 +1,12 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import bannerImage from '../images/Apropos.webp'
 import Collapse from '../components/Collapse'
+import bannerImage from '../assets/Apropos.webp'
 
 const Apropos = () => {
+  /************* Collapse Titles ******************/
   const elements = ['Fiabilité', 'Respect', 'Service', 'Sécurité']
+  /************* Collapse Contents ******************/
   const contents = [
     'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.',
     'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.',
@@ -13,8 +15,11 @@ const Apropos = () => {
   ]
   return (
     <React.Fragment>
+      {/************* A propos Banner ******************/}
       <Banner imageSrc={bannerImage} text="" />
+      {/************* A propos Section ******************/}
       <section id="Apropos">
+        {/************* Collapse Elements Creation ******************/}
         {elements.map((title, index) => (
           <Collapse key={`${title}-${index}`} title={title} description={contents[index]} />
         ))}

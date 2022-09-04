@@ -1,25 +1,8 @@
 body {
   margin: 0;
-  // max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  #root {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 7%;
-    padding-right: 7%;
-    justify-content: space-between;
-  }
+  @include margin-center;
 }
 
 * {
   box-sizing: border-box;
 }
-/*:focus-visible {
-    outline: 3px solid $color-pri-dark;
-    border-radius: 10px;
-  }*/

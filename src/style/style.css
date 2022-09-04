@@ -1,10 +1,9 @@
 @charset "UTF-8";
 /******************* COLORS ************************/
-/******************* Sorter ************************/
 /******************* Global Flex ************************/
-/******************* Like Icon ************************/
-/******************* Center of the page ************************/
-/******************* Photographer Info ************************/
+/******************* Center of the page *******************/
+/******************* Margin *******************/
+/******************* Width and height *******************/
 /******************* Accessibility ************************/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500;1,700&display=swap");
 body {
@@ -12,228 +11,87 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-body #root {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 7%;
-  padding-right: 7%;
-  justify-content: space-between;
-}
 
 * {
   box-sizing: border-box;
 }
 
-/*:focus-visible {
-    outline: 3px solid $color-pri-dark;
-    border-radius: 10px;
-  }*/
+#root {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
 body {
   font-family: "Montserrat", "DM Sans", sans-serif;
   font-size: 100%;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  /* added line */
-  border: 0;
-}
-
 /**************** Bannière ****************/
-.banner-container {
-  background-color: #c4c4c4;
+.banner {
+  width: 100%;
+  height: 223px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
-  width: 100%;
-  height: 223px;
   flex-shrink: 0;
+  background-color: #c4c4c4;
+  border-radius: 20px;
 }
-.banner-container .banner-image {
+.banner_image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   -webkit-filter: brightness(20%);
-  /* Chrome, Safari, Opera */
   filter: brightness(90%);
   border-radius: 20px;
 }
-.banner-container .banner-text {
+.banner_text {
   position: absolute;
   font-size: 30px;
   color: white;
   font-weight: bold;
 }
 
+/**************** Responsive ****************/
 @media screen and (max-width: 768px) {
-  .banner-container {
+  .banner {
     height: 111px;
   }
-  .banner-container .banner-text {
+  .banner_text {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 475px) {
-  .banner-container .banner-text {
+  .banner_text {
     font-size: 18px;
-  }
-}
-/**************** Gallery ****************/
-.gallery-container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  gap: 50px;
-  padding: 50px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  background-color: #f6f6f6;
-  border-radius: 20px;
-  flex: 1 0 auto;
-}
-
-@media screen and (max-width: 768px) {
-  .gallery-container {
-    gap: 20px;
-    padding: 0px;
-    background-color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-}
-/**************** Apartment Info ****************/
-#apartmentInfo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  font-weight: 500;
-}
-#apartmentInfo h1 {
-  font-size: 36px;
-  color: #ff6060;
-  font-weight: 500;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-#apartmentInfo p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #ff6060;
-  margin-bottom: 30px;
-}
-#apartmentInfo .tags {
-  margin-top: 10px;
-}
-#apartmentInfo .tags span {
-  font-size: 14px;
-  padding: 5px 25px 5px 25px;
-  margin-right: 10px;
-  border-radius: 10px;
-  color: white;
-  background-color: #ff6060;
-}
-#apartmentInfo .right-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-#apartmentInfo .right-block .host {
-  display: flex;
-  flex-direction: row;
-}
-#apartmentInfo .right-block .host p {
-  width: min-content;
-  text-align: right;
-  font-size: 18px;
-  margin-right: 10px;
-}
-#apartmentInfo .right-block .host img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-}
-#apartmentInfo .right-block .stars {
-  margin-top: 19px;
-  width: 30px;
-  height: 30px;
-}
-
-@media screen and (max-width: 768px) {
-  #apartmentInfo {
-    flex-direction: column;
-    align-items: normal;
-  }
-  #apartmentInfo h1 {
-    font-size: 18px;
-  }
-  #apartmentInfo p {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  #apartmentInfo .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  #apartmentInfo .tags span {
-    font-size: 10px;
-  }
-  #apartmentInfo .right-block {
-    margin-top: 10px;
-    flex-direction: row-reverse;
-    align-items: stretch;
-    justify-content: space-between;
-  }
-  #apartmentInfo .right-block .host p {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    font-size: 12px;
-  }
-  #apartmentInfo .right-block .host img {
-    width: 32px;
-    height: 32px;
-  }
-  #apartmentInfo .right-block .stars {
-    margin-top: 10px;
-    width: 15px;
-    height: 15px;
   }
 }
 /**************** Card ****************/
-.card-container {
-  background-color: #c4c4c4;
+.card {
+  width: 340px;
+  height: 340px;
   position: relative;
+  background-color: #c4c4c4;
   display: flex;
   align-items: flex-end;
   border-radius: 10px;
-  width: 340px;
-  height: 340px;
 }
-.card-container .card-image {
+.card_image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
-.card-container .card-title {
+.card_title {
   position: absolute;
   margin-left: 30px;
   margin-right: 30px;
@@ -242,43 +100,20 @@ body {
   font-weight: 500;
 }
 
+/**************** Responsive ****************/
 @media screen and (max-width: 768px) {
-  .card-container {
+  .card {
     width: 85.5vw;
     height: 255px;
   }
 }
-@media screen and (max-width: 475px) {
-  .banner-container .banner-text {
-    font-size: 18px;
-  }
-}
-/**************** Description ****************/
-#descriptions {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  width: 100%;
-  height: 100%;
-  font-weight: 500;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-#descriptions .left-description {
-  width: 50%;
-  border-radius: 10px;
-}
-#descriptions .right-description {
-  width: 50%;
-  border-radius: 10px;
-}
-
-.collapse-container {
+/**************** Collapse Element ****************/
+.collapse {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-.collapse-container .collapse-title {
+.collapse_title {
   position: relative;
   background-color: #ff6060;
   width: 100%;
@@ -288,18 +123,17 @@ body {
   font-weight: 500;
   color: white;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
-.collapse-container .collapse-title .not-rotate-arrow {
+.collapse_title .unrotate-arrow {
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
 }
-.collapse-container .collapse-title .rotate-arrow {
+.collapse_title .rotate-arrow {
   transform: rotate(-180deg);
   transition: 0.5s ease-in-out;
 }
-.collapse-container .collapse-content {
+.collapse_content {
   width: 100%;
   padding: 45px 25px 30px 25px;
   margin-top: -10px;
@@ -310,62 +144,35 @@ body {
   border-radius: 10px;
 }
 
+/**************** Responsive ****************/
 @media screen and (max-width: 768px) {
-  #descriptions {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-  }
-  #descriptions .left-description {
-    width: 100%;
-  }
-  #descriptions .right-description {
-    width: 100%;
-  }
-
-  .collapse-container .collapse-title {
+  .collapse_title {
     font-size: 13px;
   }
-  .collapse-container .collapse-title .rotate-arrow {
+  .collapse_title .rotate-arrow {
     width: 18px;
   }
-  .collapse-container .collapse-content {
+  .collapse_content {
     padding: 20px 10px 10px 10px;
     font-size: 12px;
   }
 }
-#lightbox {
+/**************** Lightbox ****************/
+.lightbox {
   display: flex;
   align-items: center;
   position: relative;
   margin-bottom: 30px;
   mix-blend-mode: normal;
 }
-#lightbox .chevron {
-  width: 47px;
-  height: 70px;
-  position: absolute;
-  fill: white;
-  cursor: pointer;
-  stroke: rgba(0, 0, 0, 0.507);
-  stroke-width: 10;
-}
-#lightbox .left {
-  left: 70px;
-}
-#lightbox .right {
-  right: 70px;
-}
-#lightbox .lightbox-image {
+.lightbox_image {
   width: 85vw;
   height: 45.5vh;
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 25px;
-  display: block;
 }
-#lightbox .image-index {
+.lightbox_index {
   position: absolute;
   bottom: 30px;
   left: 50%;
@@ -374,114 +181,294 @@ body {
   font-weight: 500;
   text-shadow: black 1px 1px;
 }
+.lightbox .chevron {
+  width: 47px;
+  height: 70px;
+  position: absolute;
+  fill: white;
+  cursor: pointer;
+  stroke: rgba(0, 0, 0, 0.507);
+  stroke-width: 10;
+}
+.lightbox .left {
+  left: 70px;
+}
+.lightbox .right {
+  right: 70px;
+}
 
+/**************** Responsive ****************/
 @media screen and (max-width: 768px) {
-  #lightbox .chevron {
+  .lightbox_image {
+    height: 30vh;
+    border-radius: 10px;
+  }
+  .lightbox_index {
+    display: none;
+  }
+  .lightbox .chevron {
     width: 20px;
     height: 30px;
   }
-  #lightbox .left {
-    left: 5px;
+  .lightbox .left {
+    left: 10px;
   }
-  #lightbox .right {
-    right: 5px;
-  }
-  #lightbox .lightbox-image {
-    width: 85vw;
-    height: 30vh;
-    -o-object-fit: cover;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-  }
-  #lightbox .image-index {
-    display: none;
+  .lightbox .right {
+    right: 10px;
   }
 }
-/**************** Home header ****************/
-header {
+/**************** Description ****************/
+.description {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 50px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.description_left {
+  width: 50%;
+  border-radius: 10px;
+}
+.description_right {
+  width: 50%;
+  border-radius: 10px;
+}
+
+/**************** Responsive ****************/
+@media screen and (max-width: 768px) {
+  .description {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .description_left {
+    width: 100%;
+  }
+  .description_right {
+    width: 100%;
+  }
+}
+/**************** Gallery ****************/
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1 0 auto;
+  gap: 50px;
+  padding: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+}
+
+/**************** Responsive ****************/
+@media screen and (max-width: 768px) {
+  .gallery {
+    gap: 20px;
+    padding: 0px;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+/**************** Apartment Info ****************/
+.info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.info_leftBlock h1 {
+  font-size: 36px;
+  color: #ff6060;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.info_leftBlock p {
+  font-size: 18px;
+  color: #ff6060;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.info_leftBlock_tags {
+  margin-top: 10px;
+}
+.info_leftBlock_tags span {
+  font-size: 14px;
+  padding: 5px 25px 5px 25px;
+  margin-right: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #ff6060;
+}
+.info_rightBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.info_rightBlock_host {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+}
+.info_rightBlock_host p {
+  color: #ff6060;
+  width: min-content;
+  text-align: right;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.info_rightBlock_host img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.info_rightBlock_ratings {
+  width: max-content;
+}
+.info_rightBlock_ratings .stars {
+  margin-top: 19px;
+  width: 30px;
+  height: 30px;
+}
+
+/**************** Responsive ****************/
+@media screen and (max-width: 768px) {
+  .info {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .info_leftBlock h1 {
+    font-size: 18px;
+  }
+  .info_leftBlock p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .info_leftBlock_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .info_leftBlock_tags span {
+    font-size: 10px;
+  }
+  .info_rightBlock {
+    margin-top: 10px;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  .info_rightBlock_host p {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+  .info_rightBlock_host img {
+    width: 32px;
+    height: 32px;
+  }
+  .info_rightBlock_ratings {
+    width: max-content;
+  }
+  .info_rightBlock_ratings .stars {
+    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+  }
+}
+/**************** Header ****************/
+.header {
   width: 100%;
   height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-shrink: 0;
 }
-header .logo {
+.header_logo {
   width: 240px;
   height: 100px;
 }
-header nav a {
+.header_link {
   font-size: 24px;
   color: #ff6060;
   cursor: pointer;
   text-decoration: none;
   margin-left: 30px;
 }
-header .active {
+.header .active {
   text-decoration: underline;
 }
 
+/**************** Responsive ****************/
 @media screen and (max-width: 768px) {
-  header a .logo {
+  .header_logo {
     width: 160px;
     height: 80px;
   }
-  header nav a {
+  .header_link {
     text-transform: uppercase;
     font-size: 12px;
     margin-left: 10px;
   }
 }
 @media screen and (max-width: 360px) {
-  header nav a {
-    text-transform: uppercase;
+  .header_link {
     font-size: 10px;
-    margin-left: 10px;
+    margin-left: 5px;
   }
 }
 /**************** Footer ****************/
-footer {
+.footer {
   width: 100%;
   height: 209px;
-  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  flex-direction: column;
-  background-color: black;
-  padding: 100px;
-  margin-top: 30px;
   flex-shrink: 0;
+  background-color: black;
+  padding: 50px;
+  margin-top: 30px;
 }
-footer .footer-text {
+.footer_text {
   color: white;
   font-size: 24px;
 }
-footer .footer-logo {
+.footer_logo {
   width: 115px;
   margin-bottom: 50px;
 }
 
+/**************** Responsive ****************/
 @media screen and (max-width: 768px) {
-  footer .footer-text {
+  .footer_text {
     font-size: 12px;
     width: max-content;
   }
-  footer .footer-logo {
+  .footer_logo {
     margin-bottom: 30px;
   }
 }
+/**************** A propos Page ****************/
 #Apropos {
   width: 80%;
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex: 1 0 auto;
   gap: 30px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  flex: 1 0 auto;
 }
 
 /**************** 404 Error ****************/
@@ -489,9 +476,9 @@ footer .footer-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1 0 auto;
   color: #ff6060;
   margin-top: -100px;
-  flex: 1 0 auto;
   text-align: center;
 }
 #error404 h1 {
@@ -500,11 +487,12 @@ footer .footer-logo {
 }
 #error404 a {
   margin-top: 100px;
+  margin-bottom: 40px;
   text-decoration: none;
   color: #ff6060;
-  margin-bottom: 40px;
 }
 
+/**************** Responsive ****************/
 @media screen and (max-width: 768px) {
   #error404 {
     display: flex;

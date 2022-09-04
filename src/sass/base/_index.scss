@@ -1,0 +1,9 @@
+#root {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  height: 100%;
+  position: absolute;
+  @include flex-column-center;
+  justify-content: space-between;
+  @include margin-lr(7%, 7%);
+}

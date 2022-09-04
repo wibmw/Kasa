@@ -6,11 +6,14 @@ import Description from '../components/Description'
 
 const FicheLogement = () => {
   const id = useParams().id
-  // console.log(id)
+
   return (
     <React.Fragment>
+      {/************* LightBox Carrousel ******************/}
       <Lightbox id={id} />
+      {/************* Info BLock ******************/}
       <Info id={id} />
+      {/************* Description BLock ******************/}
       <Description id={id} />
     </React.Fragment>
   )

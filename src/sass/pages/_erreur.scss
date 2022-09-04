@@ -1,30 +1,26 @@
 /**************** 404 Error ****************/
 #error404 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-column-center;
+  flex: 1 0 auto;
   color: $primary-color;
   margin-top: -100px;
-  flex: 1 0 auto;
   text-align: center;
+  // 404
   h1 {
     font-size: 288px;
     margin-bottom: 10px;
   }
+  // Link to home
   a {
-    margin-top: 100px;
+    @include margin-tb(100px, 40px);
     text-decoration: none;
     color: $primary-color;
-    margin-bottom: 40px;
   }
 }
-
-
+/**************** Responsive ****************/
 @media screen and (max-width: 768px) {
   #error404 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center;
     color: $primary-color;
     margin-top: 0px;
     flex: 1 0 auto;

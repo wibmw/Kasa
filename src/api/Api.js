@@ -4,6 +4,19 @@ import { useState, useEffect } from 'react'
  *Fetch data from the API
  */
 
+/* const [logements, setApartments] = useState()
+
+ // Function to collect data
+ const getApiData = () => {
+   fetch('../data/logements.json')
+     .then((res) => res.json())
+     .then((data) => setApartments(data))
+ }
+
+useEffect(() => {
+  getApiData()
+}, [logements])*/
+
 const getData = (id) => {
   const [apartments, setApartments] = useState()
   console.log(id)
