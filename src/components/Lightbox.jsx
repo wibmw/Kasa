@@ -1,11 +1,8 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import logements from '../data/logements.json'
 
-const Lightbox = ({ id }) => {
-  const apartment = logements.filter((appart) => appart.id == id)[0]
-  const pictures = apartment.pictures
-  const title = apartment.title
+const Lightbox = ({ title, pictures }) => {
+
   const [activeIndex, setActiveIndex] = useState(0)
 
   const previous = () => {
@@ -17,6 +14,7 @@ const Lightbox = ({ id }) => {
     /************* Select the next picture ******************/
     setActiveIndex((index) => (index + 1 > pictures.length - 1 ? 0 : index + 1))
   }
+  
   return (
     /************* Lightbox Section ******************/
     <section className="lightbox">
@@ -39,7 +37,8 @@ const Lightbox = ({ id }) => {
 }
 
 Lightbox.propTypes = {
-  id: PropTypes.string
+  title: PropTypes.string,
+  pictures: PropTypes.oneOfType([PropTypes.array, PropTypes.string])
 }
 
 export default Lightbox

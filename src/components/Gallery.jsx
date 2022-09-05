@@ -1,7 +1,6 @@
 import React from 'react'
-
-import logements from '../data/logements.json'
 import Card from '../components/Card'
+import logements from '../data/logements.json'
 
 const Gallery = () => {
   return (

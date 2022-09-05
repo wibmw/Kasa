@@ -7,6 +7,7 @@
 /******************* Accessibility ************************/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500;1,700&display=swap");
 body {
+  min-width: 320px;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
@@ -20,6 +21,7 @@ body {
   width: -webkit-fill-available;
   width: -moz-available;
   height: 100%;
+  min-width: 320px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -105,6 +107,7 @@ body {
   .card {
     width: 85.5vw;
     height: 255px;
+    min-width: 320px;
   }
 }
 /**************** Collapse Element ****************/
@@ -202,6 +205,7 @@ body {
   .lightbox_image {
     height: 30vh;
     border-radius: 10px;
+    min-width: 320px;
   }
   .lightbox_index {
     display: none;
@@ -428,7 +432,7 @@ body {
 }
 /**************** Footer ****************/
 .footer {
-  width: 100%;
+  width: 116.3%;
   height: 209px;
   display: flex;
   flex-direction: column;
@@ -452,7 +456,6 @@ body {
 @media screen and (max-width: 768px) {
   .footer_text {
     font-size: 12px;
-    width: max-content;
   }
   .footer_logo {
     margin-bottom: 30px;
