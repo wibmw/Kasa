@@ -1,7 +1,5 @@
 ![Kasa](./src/assets/logoKasa.jpg) 
 
-
-
 ## Contexte
 > Le site de Kasa a été codé il y a maintenant plus de 10 ans en ASP.NET avec un code legacy important. Laura, la CTO, a donc lancé une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté Back-end, et React côté Front-end. 
 
@@ -20,6 +18,26 @@ Quelques précisions sur les fonctionnalités du site :
 - **Si le Collapse est ouvert, le clic de l'utilisateur permet de le fermer :**
 ○ Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
 
+## Notes
+###Maquette :
+
+[Maquette Figma](https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design?node-id=4%3A1)
+
+###Polices :
+- __Logo & titres:__ *Montserrat*
+- __Texte:__ *Montserrat*
+
+###Couleurs :
+***Primaire :***
+-  🟥 __*#FF6060*__
+  
+***Secondaire :***
+-  ⬜️ __*#F6F6F6*__
+-  ⬛ __*#C4C4C4*__
+
+ **Linter & Formatter:**     
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white) 
+![ESLint](https://img.shields.io/badge/-Prettier-blue) 
 ## Scripts disponibles
 
 Dans le dossier du projet, exéctuer:
