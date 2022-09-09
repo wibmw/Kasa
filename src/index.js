@@ -9,21 +9,21 @@ import Erreur from './pages/Erreur'
 import './style/style.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-let baseURL = ''
+/*let baseURL = ''
 if (process.env.NODE_ENV == 'production') {
   baseURL = 'Kasa/'
 } else {
   baseURL = '/'
-}
+}*/
 
 root.render(
   <Router>
     <Header />
     <Routes>
-      <Route exact path={baseURL + ''} element={<Home />} />
-      <Route path={baseURL + 'apropos'} element={<Apropos />} />
-      <Route path={baseURL + 'ficheLogement/:id'} element={<FicheLogement />} />
-      <Route path={baseURL + '*'} element={<Erreur />} />
+      <Route exact path={'/'} element={<Home />} />
+      <Route path={'/apropos'} element={<Apropos />} />
+      <Route path={'/ficheLogement/:id'} element={<FicheLogement />} />
+      <Route path={'*'} element={<Erreur />} />
     </Routes>
     <Footer />
   </Router>
